@@ -1,0 +1,11 @@
+.amount-divs {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.amount-div {
+    min-height: 150px;
+    background-color: #fff;
+    box-shadow: 0 0 20px rgba(8, 21, 66, 0.05);
+}
