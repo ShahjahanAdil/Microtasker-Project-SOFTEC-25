@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+@font-face {
+    font-family: Poppins;
+    src: url('./assets/fonts/Poppins.ttf');
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url('./assets/fonts/Roboto.ttf');
+}
+
+@font-face {
+    font-family: Barlow;
+    src: url('./assets/fonts/Barlow.ttf');
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+h3 {
+    font-size: 2.2rem;
+}
+
+h4 {
+    font-size: 2rem;
+}
+
+h5 {
+    font-size: 1.5rem;
+}
+
+p {
+    font-family: 'Barlow', sans-serif;
+    font-size: 1.3rem;
+    color: #333;
+}
+
+button {
+    font-family: 'Barlow';
+    font-size: 1.2rem;
+    color: #333;
+}
+
+a {
+    font-family: 'Barlow';
+    color: #333;
+}
+
+label {
+    font-family: "Barlow";
+    columns: #333;
+}
+
+.link {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    color: #666;
+}

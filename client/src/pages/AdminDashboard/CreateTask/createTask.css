@@ -1,0 +1,7 @@
+input {
+    outline: none;
+}
+
+input:focus {
+    border-color: #5271FF;
+}

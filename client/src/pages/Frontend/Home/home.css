@@ -1,0 +1,21 @@
+.hero-section {
+    height: calc(100vh - 112.83px);
+}
+
+.hero-left {
+    width: 45%;
+}
+
+.hero-right {
+    width: 40%;
+}
+
+.hero-right img {
+    width: 100%;
+}
+
+.main-heading {
+    background: -webkit-linear-gradient(#4158D0, #C850C0, #FFCC70);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

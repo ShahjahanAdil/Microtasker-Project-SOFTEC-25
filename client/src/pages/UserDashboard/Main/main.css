@@ -1,0 +1,22 @@
+.dashboard-boxes {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.dashboard-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 180px;
+    background-color: #fff;
+    padding: 20px 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(8, 21, 66, 0.05);
+}
+
+.dashboard-box p {
+    font-size: 32px;
+    font-weight: bold;
+}

@@ -1,0 +1,45 @@
+.public-task-box {
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 0 20px rgba(8, 21, 66, 0.05);
+}
+
+.see-dets {
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
+}
+
+.ellipsis {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-clamp: 2;
+    -webkit-line-clamp: 2;
+}
+
+p {
+    font-size: 14px;
+}
+
+span {
+    font-family: "Barlow";
+}
+
+.title {
+    color: #5271ff;
+    font-size: 20px;
+}
+
+.title:hover {
+    color: #666;
+}
+
+.description {
+    color: #666;
+    font-size: 16px;
+    font-family: 'Barlow', sans-serif;
+}
+
+.price {
+    font-size: 18px;
+}

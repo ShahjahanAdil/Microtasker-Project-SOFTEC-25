@@ -1,0 +1,23 @@
+.my-task-boxes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.my-task-box {
+    min-height: 220px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(8, 21, 66, 0.05);
+    transition: all 0.2s ease;
+}
+
+.my-task-box:hover {
+    box-shadow: 0 0 30px rgba(1, 4, 16, 0.05);
+}
+
+.word-wrap {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+}

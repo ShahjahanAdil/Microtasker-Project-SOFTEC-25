@@ -1,0 +1,34 @@
+.auth-container {
+    animation: auth 0.5s forwards;
+}
+
+@keyframes auth {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.auth-box {
+    border: 2px solid #e8e8e8;
+}
+
+input {
+    outline: none;
+}
+
+input:focus {
+    border-color: #5271FF;
+}
+
+button {
+    color: #fff;
+    transition: all 0.25s ease-out;
+}
+
+button:hover {
+    background-color: #333;
+}
