@@ -30,7 +30,7 @@ export default function Home() {
                     </div>
                 </div>
                 <div className="hero-right">
-                    <img src={img1} alt="hero-section-img" className='' />
+                    <img src={img1} alt="hero-section-img" />
                 </div>
             </div>
 

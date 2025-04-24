@@ -5,12 +5,12 @@ export default function Policies() {
     return (
         <>
             <div className='flex justify-center my-10'>
-                <h1 className='txt-gradient inline-block'>Privacy Policies</h1>
+                <h1 className='txt-gradient inline-block !text-[2rem] sm:!text-[3rem]'>Privacy Policies</h1>
             </div>
 
             <div className='policies-container'>
                 <p className='text-start text-black !text-base font-bold'>Privacy Policy (Last Updated ;Thursday, April 24, 2025 )</p>
-                <h2 className='text-center font-bold my-4'>MicroTasker Privacy Policy</h2>
+                <h2 className='text-center font-bold my-4 !text-[2rem] sm:!text-[3rem]'>MicroTasker Privacy Policy</h2>
                 <p className='!text-base'>This Privacy Policy describes the policies and procedures of MicroTasker regarding the collection, use, security, and disclosure of your personal information. It also describes your rights and choices regarding access, use, correction, and deletion of your personal information.</p>
                 <div className='my-3'>
                     <p className='!text-lg font-bold !text-black'>1. Scope</p>

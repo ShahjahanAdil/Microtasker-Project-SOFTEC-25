@@ -29,7 +29,7 @@ export default function AdminDashboard() {
 
             <div className='flex'>
                 <div className='icons-sidebar w-[80px] border-r-2 border-gray-100'>
-                    <ul className='flex flex-col items-center gap-6 mt-10' onClick={() => setSidebarOpen(!sidebarOpen)}>
+                    <ul className='flex flex-col items-center gap-6 mt-10' onClick={() => setSidebarOpen(false)}>
                         <li><Link to='/admin/dashboard' className='side-icons text-[18px]'><AiOutlineDashboard /></Link></li>
                         <li><Link to='/admin/create-task' className='side-icons text-[18px]'><FiPlusCircle /></Link></li>
                         <li><Link to='/admin/tasks-created' className='side-icons text-[18px]'><PiStackDuotone /></Link></li>
@@ -41,7 +41,7 @@ export default function AdminDashboard() {
                     </ul>
 
                     <div className={`sidebar h-[100%] border-r-2 border-gray-100 ${sidebarOpen && 'sidebar-open'}`}>
-                        <ul className='flex flex-col pl-10 gap-6 mt-10' onClick={() => setSidebarOpen(!sidebarOpen)}>
+                        <ul className='flex flex-col pl-10 gap-6 mt-10' onClick={() => setSidebarOpen(false)}>
                             <li><p className='sidebar-text leading-none'><Link className='sidebar-link' to='/admin/dashboard'>Admin Panel</Link></p></li>
                             <li><p className='sidebar-text leading-none'><Link className='sidebar-link' to='/admin/create-task'>Create Task</Link></p></li>
                             <li><p className='sidebar-text leading-none'><Link className='sidebar-link' to='/admin/tasks-created'>Tasks Created</Link></p></li>

@@ -51,10 +51,10 @@ export default function Payouts() {
         <div className='f-container'>
             <div className='min-h-[calc(100vh-112px)]'>
                 <div className='flex justify-center my-10'>
-                    <h1 className='txt-gradient inline-block'>Payout Proofs</h1>
+                    <h1 className='txt-gradient inline-block !text-[2rem] sm:!text-[3rem]'>Payout Proofs</h1>
                 </div>
 
-                <div className="table-div flex flex-col border border-gray-200 rounded-[15px] mt-8">
+                <div className="table-div flex flex-col border border-gray-200 rounded-[15px] mt-8 px-5">
                     <div className="-m-1.5 overflow-x-auto">
                         <div className="p-1.5 min-w-full inline-block align-middle">
                             <div className="overflow-hidden rounded-[15px]">

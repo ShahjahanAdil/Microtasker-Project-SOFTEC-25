@@ -18,6 +18,17 @@
 
 .hero-right img {
     width: 100%;
+    animation: heroImg 2.5s alternate infinite;
+}
+
+@keyframes heroImg {
+    0% {
+        transform: translateY(2%);
+    }
+
+    100% {
+        transform: translateY(-5%);
+    }
 }
 
 .txt-gradient {
