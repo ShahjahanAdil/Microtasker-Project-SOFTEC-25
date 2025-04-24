@@ -6,6 +6,7 @@ import { RiUser6Line } from "react-icons/ri";
 import { FiBell, FiPower } from "react-icons/fi";
 import { FaArrowRight } from "react-icons/fa";
 import { LuTrophy } from 'react-icons/lu'
+import { SlBadge } from "react-icons/sl";
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
@@ -15,11 +16,28 @@ export default function UserHeader() {
     const [notifications, setNotifications] = useState([])
     const [hasUnreadNotifications, setHasUnreadNotifications] = useState(false)
     const [bellOpen, setBellOpen] = useState(false)
+    const [level, setLevel] = useState(0)
     const navigate = useNavigate()
 
     useEffect(() => {
         if (user.userID) {
             fetchNotifications()
+
+            const points = user?.points
+
+            if (points === 0) {
+                setLevel(0)
+            } else if (points >= 50 && points <= 99) {
+                setLevel(1)
+            } else if (points >= 100 && points <= 149) {
+                setLevel(2)
+            } else if (points >= 150 && points <= 199) {
+                setLevel(3)
+            } else if (points >= 200 && points <= 249) {
+                setLevel(4)
+            } else {
+                setLevel(5)
+            }
         }
     }, [user])
 
@@ -72,6 +90,12 @@ export default function UserHeader() {
             </div>
             <div className='uh-right'>
                 <ul className='flex items-center gap-5'>
+                    <li>
+                        <span className='flex gap-1 items-center bg-[#dceeff] border border-blue-300 px-2 py-[2px] rounded-[5px]'>
+                            <span className='text-[#3051d2] flex items-center gap-1'><SlBadge /> Level:</span>
+                            <span className='text-[#3c64e9]'>{level}</span>
+                        </span>
+                    </li>
                     <li>
                         <span className='flex gap-1 items-center bg-[#e6ffdc] border border-green-300 px-2 py-[2px] rounded-[5px]'>
                             <span className='text-[#30d233]'><LuTrophy /></span>

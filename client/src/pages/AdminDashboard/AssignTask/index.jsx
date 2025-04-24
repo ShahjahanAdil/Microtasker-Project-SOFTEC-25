@@ -110,7 +110,7 @@ export default function AssignTask() {
                         <div className="p-1.5 min-w-full inline-block align-middle">
                             <div className="overflow-hidden rounded-[10px]">
                                 <table className="min-w-full divide-y divide-gray-200">
-                                    <thead className='bg-[#5271ff]'>
+                                    <thead className='bg-[#5272ffa3]'>
                                         <tr>
                                             <th scope="col" className="px-6 py-3 text-start text-[13px] font-bold text-[#fff] uppercase">UID</th>
                                             <th scope="col" className="px-6 py-3 text-start text-[13px] font-bold text-[#fff] uppercase">Username</th>
@@ -138,7 +138,7 @@ export default function AssignTask() {
                                                                             <td className="px-6 py-4 whitespace-nowrap text-start text-[14px] text-[#666]"><span>{email}</span></td>
                                                                             <td className="px-6 py-4 whitespace-nowrap text-start text-[14px] text-[#666]"><span>{points.toFixed(2)}</span></td>
                                                                             <td className="px-6 py-4 whitespace-nowrap text-end text-[14px] text-[#666]">
-                                                                                <Link to={`/admin/assign-task/${userID}`} className='bg-[#5271ff] !text-white font-bold px-3 py-2 w-fit rounded-[8px] !shadow-md transition-all !duration-150 hover:bg-[#666]'>Assign Task</Link>
+                                                                                <Link to={`/admin/assign-task/${userID}`} className='bg-[#5272ffa3] !text-white font-bold px-3 py-2 w-fit rounded-[5px] !shadow-md transition-all !duration-150 hover:bg-[#666]'>Assign Task</Link>
                                                                             </td>
                                                                         </tr>
                                                                     )
@@ -149,7 +149,7 @@ export default function AssignTask() {
                                                                     <td className="px-6 py-4 whitespace-normal text-[14px  text-[#666]"><span className='text-ellipsis line-clamp-2'>{searchedUser.username}</span></td>
                                                                     <td className="px-6 py-4 whitespace-nowrap text-start text-[14px] text-[#666]"><span>{searchedUser.email}</span></td>
                                                                     <td className="px-6 py-4 whitespace-nowrap text-end text-[14px] text-[#666]">
-                                                                        <Link to={`/admin/assign-task/${searchedUser.userID}`} className='bg-[#5271ff] !text-white font-bold px-3 py-2 w-fit rounded-[8px] !shadow-md transition-all !duration-150 hover:bg-[#666]'>Assign Task</Link>
+                                                                        <Link to={`/admin/assign-task/${searchedUser.userID}`} className='bg-[#5272ffa3] !text-white font-bold px-3 py-2 w-fit rounded-[5px] !shadow-md transition-all !duration-150 hover:bg-[#666]'>Assign Task</Link>
                                                                     </td>
                                                                 </tr>
                                                         )

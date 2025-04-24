@@ -205,7 +205,7 @@ export default function Payments() {
                         <div className="p-1.5 min-w-full inline-block align-middle">
                             <div className="overflow-hidden rounded-[15px]">
                                 <table className="min-w-full divide-y divide-gray-200">
-                                    <thead className='bg-[#5271ff]'>
+                                    <thead className='bg-[#5272ffa3]'>
                                         <tr>
                                             <th scope="col" className="px-6 py-3 text-start text-[13px] font-bold text-[#fff] uppercase">TID</th>
                                             <th scope="col" className="px-6 py-3 text-start text-[13px] font-bold text-[#fff] uppercase">Date</th>
@@ -267,16 +267,16 @@ export default function Payments() {
                     <p className='mb-2 flex gap-2 items-center font-bold !text-[18px]'><LuInfo className='text-[#0093e9]' /> Status Info:</p>
                     <ul>
                         <li className='flex gap-2 items-center'>
-                            <p className='!text-[16px] font-bold'>Pending:</p>
-                            <p className='!text-[16px] text-[#666] font-normal'>Your request is being reviewed by the admin</p>
+                            <p className='!text-[16px] indent-7 font-bold'>Pending:</p>
+                            <p className='!text-[16px] indent-7 text-[#666] font-normal'>Your request is being reviewed by the admin</p>
                         </li>
                         <li className='flex gap-2 items-center'>
-                            <p className='!text-[16px] font-bold'>Completed:</p>
-                            <p className='!text-[16px] text-[#666] font-normal'>Your withdrawal has been sent to your account</p>
+                            <p className='!text-[16px] indent-7 font-bold'>Completed:</p>
+                            <p className='!text-[16px] indent-7 text-[#666] font-normal'>Your withdrawal has been sent to your account</p>
                         </li>
                         <li className='flex gap-2 items-center'>
-                            <p className='!text-[16px] font-bold'>Cancelled:</p>
-                            <p className='!text-[16px] text-[#666] font-normal'>Your request has been cancelled by the admin</p>
+                            <p className='!text-[16px] indent-7 font-bold'>Cancelled:</p>
+                            <p className='!text-[16px] indent-7 text-[#666] font-normal'>Your request has been cancelled by the admin</p>
                         </li>
                     </ul>
                 </div>

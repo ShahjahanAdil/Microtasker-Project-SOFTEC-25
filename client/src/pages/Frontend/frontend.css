@@ -1,0 +1,14 @@
+.f-container {
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.txt-gradient {
+    color: #30A3C9;
+    background-image: linear-gradient(45deg, #30A3C9, #BA3CE8 50%, #3D5DE0 69%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+}

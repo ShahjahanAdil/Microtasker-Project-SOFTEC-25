@@ -62,7 +62,7 @@ export default function PublicTasks() {
                     </h6>
                 </div>
 
-                <div className='flex flex-col gap-5 mt-5 mb-10'>
+                <div className='flex flex-col gap-5 mt-8 mb-10'>
                     {
                         loading ?
                             <PublicTasksLoader />

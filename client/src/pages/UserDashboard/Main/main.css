@@ -20,3 +20,25 @@
     font-size: 32px;
     font-weight: bold;
 }
+
+.performance {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.performance .box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 220px;
+    background-color: #fff;
+    margin-top: 20px;
+    padding: 30px;
+    box-shadow: 0 0 20px rgba(8, 21, 66, 0.05);
+}
+
+.performance .box-1 {
+    background-image: linear-gradient(to top, #fbc2ebce 0%, #a6c0eed2 100%);
+}

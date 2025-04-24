@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import './yourTaskDets.css'
-import { AiFillInfoCircle, AiOutlineDashboard } from 'react-icons/ai'
+import { AiFillInfoCircle, AiOutlineDashboard, AiOutlineNotification } from 'react-icons/ai'
 import axios from 'axios'
 import { useAuthContext } from '../../../../contexts/AuthContext'
 import { useParams } from 'react-router-dom'
@@ -93,6 +93,10 @@ export default function YourTaskDets() {
                             <span className='text-[18px] font-normal text-[#666]'>/ Task Detail</span>
                         </p>
                     </h6>
+                </div>
+
+                <div className='flex justify-center items-center'>
+                    <p className='bg-blue-100 border border-blue-300 px-2 py-1 rounded-[5px] flex gap-2 items-center'><AiOutlineNotification /> Task can be submitted only once!</p>
                 </div>
 
                 {

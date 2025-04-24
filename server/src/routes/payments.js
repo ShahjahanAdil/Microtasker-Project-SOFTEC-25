@@ -68,4 +68,21 @@ router.post("/payments", async (req, res) => {
     }
 })
 
+router.get("/payments/payouts", async (req, res) => {
+    try {
+        const page = parseInt(req.query.page) || 1
+        const limit = 20
+        const skip = (page - 1) * limit
+
+        const payouts = await withdrawsModel.find({ withdrawStatus: "completed" }).sort({ createdAt: -1 }).skip(skip).limit(limit)
+        const totalPayouts = await withdrawsModel.countDocuments()
+
+        return res.status(200).json({ message: "Payouts fetched successfully!", payouts, totalPayouts })
+    }
+    catch (error) {
+        console.error(error)
+        res.status(500).json({ message: "Internal server error" })
+    }
+})
+
 module.exports = router

@@ -72,7 +72,7 @@ export default function SubmittedTasks() {
                         <div className="p-1.5 min-w-full inline-block align-middle">
                             <div className="overflow-hidden rounded-[10px]">
                                 <table className="min-w-full divide-y divide-gray-200">
-                                    <thead className='bg-[#5271ff]'>
+                                    <thead className='bg-[#5272ffa3]'>
                                         <tr>
                                             <th scope="col" className="px-6 py-3 text-start text-[13px] font-bold text-[#fff] uppercase">ID</th>
                                             <th scope="col" className="px-6 py-3 text-start text-[13px] font-bold text-[#fff] uppercase">Submitted By</th>
@@ -108,7 +108,7 @@ export default function SubmittedTasks() {
                                                                     <td className="px-6 py-4 whitespace-nowrap text-end text-[14px] text-[#666]"><span>{task.taskPoints}</span></td>
                                                                     <td className="px-6 py-4 whitespace-nowrap text-end text-[14px] text-[#666]"><span>${task.taskPrice}</span></td>
                                                                     <td className="px-6 py-4 whitespace-nowrap text-end text-[14px] text-[#666]">
-                                                                        <Link to={`/admin/submitted-tasks/${task.taskID}`} className='bg-[#5271ff] !text-white font-bold px-3 py-2 rounded-[5px] shadow-md transition-all duration-200 hover:bg-[#666]'>Review</Link>
+                                                                        <Link to={`/admin/submitted-tasks/${task.taskID}`} className='bg-[#5272ffa3] !text-white font-bold px-3 py-2 rounded-[5px] shadow-md transition-all duration-200 hover:bg-[#666]'>Review</Link>
                                                                     </td>
                                                                 </tr>
                                                             )

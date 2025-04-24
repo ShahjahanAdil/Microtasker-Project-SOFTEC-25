@@ -70,7 +70,7 @@ export default function TasksCreated() {
                         <div className="p-1.5 min-w-full inline-block align-middle">
                             <div className="overflow-hidden rounded-[10px]">
                                 <table className="min-w-full divide-y divide-gray-200">
-                                    <thead className='bg-[#5271ff]'>
+                                    <thead className='bg-[#5272ffa3]'>
                                         <tr>
                                             <th scope="col" className="px-6 py-3 text-start text-[13px] font-bold text-[#fff] uppercase">ID</th>
                                             <th scope="col" className="px-6 py-3 text-start text-[13px] font-bold text-[#fff] uppercase">Title</th>

@@ -21,4 +21,19 @@ router.get("/your-tasks", async (req, res) => {
     }
 })
 
+router.delete("/your-tasks/delete", async (req, res) => {
+    try {
+        const userID = req.query.userID
+        const taskID = req.query.taskID
+
+        await userTasksModel.findOneAndDelete({ userID, taskID })
+
+        return res.status(203).json({ message: "Task deleted successfully!" })
+    }
+    catch (error) {
+        console.error(error)
+        res.status(500).json({ message: "Internal server error" })
+    }
+})
+
 module.exports = router

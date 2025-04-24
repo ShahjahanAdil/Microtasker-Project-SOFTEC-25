@@ -29,7 +29,7 @@ export default function UserDashboard() {
 
             <div className='flex'>
                 <div className='icons-sidebar w-[80px] border-r-2 border-gray-100'>
-                    <ul className='flex flex-col items-center gap-6 mt-10'>
+                    <ul className='flex flex-col items-center gap-6 mt-10' onClick={() => setSidebarOpen(!sidebarOpen)}>
                         <li><Link to='/user/dashboard' className='side-icons text-[18px]'><AiOutlineDashboard /></Link></li>
                         <li><Link to='/user/public-tasks' className='side-icons text-[18px]'><GrTasks /></Link></li>
                         <li><Link to='/user/your-tasks' className='side-icons text-[18px]'><GrTask /></Link></li>
@@ -42,7 +42,7 @@ export default function UserDashboard() {
                     </ul>
 
                     <div className={`sidebar h-[100%] border-r-2 border-gray-100 ${sidebarOpen && 'sidebar-open'}`}>
-                        <ul className='flex flex-col pl-10 gap-6 mt-10'>
+                        <ul className='flex flex-col pl-10 gap-6 mt-10' onClick={() => setSidebarOpen(!sidebarOpen)}>
                             <li><p className='sidebar-text leading-none'><Link className='sidebar-link' to='/user/dashboard'>Dashboard</Link></p></li>
                             <li><p className='sidebar-text leading-none'><Link className='sidebar-link' to='/user/public-tasks'>Public Tasks</Link></p></li>
                             <li><p className='sidebar-text leading-none'><Link className='sidebar-link' to='/user/your-tasks'>Your Tasks</Link></p></li>

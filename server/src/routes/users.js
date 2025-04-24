@@ -37,4 +37,16 @@ router.get("/fetch-users/:searchEmail", async (req, res) => {
     }
 })
 
+router.get("/fetch-top-users", async (req, res) => {
+    try {
+        const users = await authModel.find().sort({ points: -1 }).limit(3)
+
+        return res.status(200).json({ message: "Top Users fetched successfully!", users })
+    }
+    catch (error) {
+        console.error(error)
+        res.status(500).json({ message: "Internal server error" })
+    }
+})
+
 module.exports = router
