@@ -6,6 +6,7 @@ import Header from '../../components/Header'
 import Policies from './Policies'
 import Footer from '../../components/Footer'
 import Payouts from './Payouts'
+import Contact from './Contact'
 
 export default function Frontend() {
     return (
@@ -16,6 +17,7 @@ export default function Frontend() {
                 <Route path='home' element={<Home />} />
                 <Route path='policies' element={<Policies />} />
                 <Route path='payouts' element={<Payouts />} />
+                <Route path='contact' element={<Contact />} />
             </Routes>
             <Footer />
         </div>

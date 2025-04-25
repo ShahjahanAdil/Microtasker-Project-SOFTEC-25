@@ -1,0 +1,9 @@
+.footer {
+    background-color: #f1f5fd !important;
+}
+
+@media screen and (max-width:768px) {
+    .google-pic {
+        width: 60%;
+    }
+}
