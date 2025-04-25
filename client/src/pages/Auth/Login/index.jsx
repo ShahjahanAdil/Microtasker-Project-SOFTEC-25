@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import './login.css'
 import { Link, useNavigate } from 'react-router-dom'
 import Loader from '../../../components/Loader'
+import logo from '../../../assets/images/microtasker-logo.png'
 import axios from 'axios'
 import { useAuthContext } from '../../../contexts/AuthContext'
 
@@ -59,7 +60,11 @@ export default function Login() {
         <div className="auth-container w-full h-screen flex flex-col justify-center items-center bg-[#f8f8f8]">
             <div className="auth-box w-full max-w-[450px] min-h-[300px] rounded-[5px] p-8 bg-white">
                 <form onSubmit={handleLogin}>
-                    <h2 className='text-[24px] font-bold'>Login Account</h2>
+                    <div className='flex items-center justify-center mb-5'>
+                        <img src={logo} alt="logo" className='w-[200px]' />
+                    </div>
+                    
+                    <h2 className='!text-[26px] font-bold'>Login Account</h2>
                     <p className='mb-5'>Login to continue your session</p>
 
                     <div>
@@ -75,7 +80,7 @@ export default function Login() {
 
                     <button className='bg-[#5271FF] cursor-pointer w-full p-[10px] rounded-[5px] mt-5' onClick={handleLogin}>Login</button>
 
-                    <p className='mt-5' style={{ fontSize: '18px' }}>Don't have an account? <Link to='/auth/signup' className='underline'>Signup now</Link></p>
+                    <p className='mt-5 !text-[18px]'>Don't have an account? <Link to='/auth/signup' className='!text-[#5271ff] font-bold hover:underline'>Signup now</Link></p>
                 </form>
             </div>
         </div>

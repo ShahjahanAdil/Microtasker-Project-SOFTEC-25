@@ -3,7 +3,7 @@ import './publicTasks.css'
 import { Link } from 'react-router-dom'
 import { AiOutlineDashboard } from 'react-icons/ai'
 import { FaArrowRight } from 'react-icons/fa'
-import { LuClock, LuTrophy, LuUserRound } from 'react-icons/lu'
+import { LuClock, LuTrophy, LuUserRound, LuSearch, LuFilter } from 'react-icons/lu'
 import axios from 'axios'
 import PublicTasksLoader from '../../../components/PublicTasksLoader'
 
@@ -13,24 +13,35 @@ export default function PublicTasks() {
     const [page, setPage] = useState(1)
     const [totalPages, setTotalPages] = useState(1)
     const [loading, setLoading] = useState(true)
+    const [search, setSearch] = useState("")
+    const [searchInput, setSearchInput] = useState("")
+    const [sortBy, setSortBy] = useState("")
 
     useEffect(() => {
-        setLoading(true)
-        axios.get(`${import.meta.env.VITE_HOST}/user/public-tasks?page=${page}`)
+        setLoading(true);
+        axios.get(`${import.meta.env.VITE_HOST}/user/public-tasks`, {
+            params: { page, search, sortBy }
+        })
             .then(res => {
-                const { status, data } = res
+                const { status, data } = res;
                 if (status === 200) {
-                    setAllPublicTasks(data?.publicTasks)
-                    setTotalPages(Math.ceil(data?.totalPublicTasks / 15))
+                    setAllPublicTasks(data?.publicTasks);
+                    setTotalPages(Math.ceil(data?.totalPublicTasks / 15));
                 }
             })
             .catch(err => {
-                console.error('Frontend POST error', err.message)
+                console.error('Frontend GET error', err.message);
+                window.toastify(err.response.data.message, "error")
             })
             .finally(() => {
-                setLoading(false)
-            })
-    }, [page])
+                setLoading(false);
+            });
+    }, [page, search]);
+
+    useEffect(() => {
+        setPage(1);
+        setSearch(searchInput.trim());
+    }, [sortBy])
 
     const renderPageNumbers = () => {
         const pages = []
@@ -60,6 +71,47 @@ export default function PublicTasks() {
                             <span className='text-[18px] font-normal text-[#666]'>/ Public Tasks</span>
                         </p>
                     </h6>
+                </div>
+
+                <div className="flex justify-between items-center gap-3 mt-5">
+                    <div className='flex items-center gap-3'>
+                        <h5 className='!text-[16px] !text-[#666] flex gap-1 items-center'><LuFilter /> Filter:</h5>
+                        <select
+                            className="border border-gray-200 rounded-[10px] px-1 py-2 bg-white text-[#666] shadow-sm hover:border-[#5271ff] focus:border-[#5271ff] focus:ring-2 focus:ring-[#5271ff]/30 transition-all duration-200 outline-none"
+                            value={sortBy}
+                            onChange={(e) => setSortBy(e.target.value)}
+                        >
+                            <option value="">🔽 Sort By</option>
+                            <option value="price-asc">💰 Price: Low to High</option>
+                            <option value="price-desc">💰 Price: High to Low</option>
+                            <option value="points-asc">🏆 Points: Low to High</option>
+                            <option value="points-desc">🏆 Points: High to Low</option>
+                        </select>
+                    </div>
+
+                    <div className='flex gap-4'>
+                        <input
+                            type="text"
+                            value={searchInput}
+                            onChange={(e) => setSearchInput(e.target.value)}
+                            placeholder="Search task"
+                            className="px-3 py-2 pr-10 bg-white shadow-sm border border-gray-200 text-[#666] rounded-[8px] w-[300px] hover:border-[#5271ff] focus:ring-2 focus:ring-[#5271ff]/30 transition-all duration-200 outline-none"
+                        />
+                        <div className="absolute right-[55px] top-[17px] pointer-events-none">
+                            <LuSearch className="text-[#666]" />
+                        </div>
+
+                        <button
+                            onClick={() => {
+                                setSearch(searchInput + " ")
+                                setTimeout(() => setSearch(searchInput.trim()), 0)
+                                setPage(1);
+                            }}
+                            className="bg-[#5271ff] text-white p-3 rounded-full hover:!bg-[#5272ffaf] transition-all"
+                        >
+                            <LuSearch />
+                        </button>
+                    </div>
                 </div>
 
                 <div className='flex flex-col gap-5 mt-8 mb-10'>

@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import './signup.css'
 import { Link, useNavigate } from 'react-router-dom'
 import { MdOutlinePrivacyTip } from "react-icons/md";
+import logo from '../../../assets/images/microtasker-logo.png'
 import Loader from '../../../components/Loader';
 import axios from 'axios'
 
@@ -67,7 +68,11 @@ export default function Signup() {
         <div className="auth-container w-full h-screen p-5 flex flex-col justify-center items-center bg-[#f8f8f8]">
             <div className="auth-box w-full max-w-[450px] min-h-[300px] rounded-[5px] p-8 bg-white">
                 <form onSubmit={handleSignup}>
-                    <h2 className='text-[24px] font-bold'>Register Account</h2>
+                    <div className='flex items-center justify-center mb-5'>
+                        <img src={logo} alt="logo" className='w-[200px]' />
+                    </div>
+
+                    <h2 className='!text-[26px] font-bold'>Register Account</h2>
                     <p className='mb-5'>Create user to continue</p>
 
                     <div>
@@ -89,7 +94,7 @@ export default function Signup() {
                     <button className='bg-[#5271FF] cursor-pointer w-full p-[10px] rounded-[5px] mt-5' onClick={handleSignup}>SIGNUP</button>
                     <p className='mt-3 flex items-center gap-1' style={{ fontSize: '18px' }}><MdOutlinePrivacyTip className='text-green-600' /> Your information is secure</p>
 
-                    <p className='mt-5' style={{ fontSize: '18px' }}>Already have an account? <Link to='/auth/login' className='underline'>Login now</Link></p>
+                    <p className='mt-5 !text-[18px]'>Already have an account? <Link to='/auth/login' className='!text-[#5271ff] font-bold hover:underline'>Login now</Link></p>
                 </form>
             </div>
         </div>

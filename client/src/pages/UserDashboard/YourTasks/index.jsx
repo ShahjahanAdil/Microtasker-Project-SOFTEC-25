@@ -120,7 +120,7 @@ export default function YourTasks() {
                                                 <div className='flex flex-col h-full justify-between p-[15px]'>
                                                     <div className='flex justify-between px-2 pb-2 border-b-3 border-neutral-100'>
                                                         <p className='text-[13px] font-bold flex items-center gap-2'><LuInfo /> Status: <span className='text-[#666] font-normal capitalize'>{taskStatus}</span></p>
-                                                        <p className='text-[15px] !text-[#ef4444]' onClick={() => handleDelete(taskID)}><LuTrash className='cursor-pointer' /></p>
+                                                        <p className='text-[15px] !text-[#ef4444] hover:!text-[#ef4444b5]' onClick={() => handleDelete(taskID)}><LuTrash className='cursor-pointer' /></p>
                                                     </div>
                                                     <div className='flex-1 pb-4'>
                                                         <Link to={`/user/your-tasks/${taskID}`} className='block word wrap font-bold px-2 !text-[#5271ff] text-[20px] mt-2 transition-all duration-200 ease-out hover:!text-[#666] hover:underline'>{taskTitle}</Link>
@@ -177,25 +177,6 @@ export default function YourTasks() {
                         </div>
                     )
                 }
-
-                {/* {
-                    openModel && (
-                        <div className="fixed w-full h-full top-0 left-0 flex justify-center items-center bg-[#1919192d] transition-opacity duration-300 ease-in-out z-50">
-                            <div className={`bg-white p-[15px] rounded-[15px] shadow-lg transform transition-all duration-300 ease-in-out
-                ${openModel ? "scale-100 opacity-100" : "scale-95 opacity-0"}`}>
-                                <p className='flex items-center gap-1 mb-3'>
-                                    <AiOutlineInfoCircle /> Are you sure you want to delete this task?
-                                </p>
-                                <div className='flex justify-end gap-2'>
-                                    <button className='bg-[#333] text-white px-3 cursor-pointer rounded-[8px] hover:!bg-[#666]' onClick={() => setOpenModel(false)}>Cancel</button>
-                                    <button className='bg-red-500 text-white px-3 cursor-pointer rounded-[8px] hover:!bg-[#f97575]' onClick={handleDeleteTask}>
-                                        {!delLoading ? "Yes" : "Deleting..."}
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    )
-                } */}
             </div>
         </div>
     )

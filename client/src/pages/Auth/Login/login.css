@@ -1,5 +1,6 @@
 .auth-container {
     animation: auth 0.5s forwards;
+    background-image: linear-gradient(to right top, #a16bd1, #996bd9, #8f6ce2, #826dea, #726ef3, #7c73f6, #8579f9, #8e7efc, #ac8afa, #c497f9, #d8a5f9, #e9b5f9);
 }
 
 @keyframes auth {
